@@ -14,7 +14,6 @@ import io.netty.util.CharsetUtil;
 //SimpleChannelInboundHandler:对于请求来讲,相当于入站,入境
 public class CustomHandler extends SimpleChannelInboundHandler<HttpObject> {
     protected void channelRead0(ChannelHandlerContext channelHandlerContext, HttpObject httpObject) throws Exception {
-
         //获取channel
         Channel channel = channelHandlerContext.channel();
 

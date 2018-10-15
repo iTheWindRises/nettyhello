@@ -18,7 +18,6 @@ public class HelloServerInitializer extends ChannelInitializer<SocketChannel> {
         //HttpServerCodec是有netty自己提供的助手类,可以理解为拦截器其实并不是
         //当请求到服务端,我们需要做解码,响应到客户端编码
         pipeline.addLast("HttpServerCodec",new HttpServerCodec());
-
         //添加自定义助手类
         pipeline.addLast("customHandler",new CustomHandler());
     }
