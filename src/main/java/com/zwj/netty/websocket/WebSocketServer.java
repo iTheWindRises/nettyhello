@@ -19,7 +19,7 @@ public class WebSocketServer {
                     .channel(NioServerSocketChannel.class)
                     .childHandler(new WSServerInitialzer());
 
-            ChannelFuture future = server.bind(8088).sync();
+            ChannelFuture future = server.bind(8089).sync();
 
             future.channel().closeFuture().sync();
         } finally {
